@@ -9,7 +9,6 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.view.CameraController
 import androidx.camera.view.LifecycleCameraController
 import androidx.camera.view.PreviewView
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -290,7 +289,8 @@ private fun CameraContent(
                 }
                 Shutter(enabled = !state.capturing && !state.saving, onClick = ::capture)
                 Box(Modifier.size(width = 96.dp, height = 64.dp), contentAlignment = Alignment.CenterEnd) {
-                    AnimatedVisibility(
+                    // fully qualified: inside Row the RowScope overload would be picked otherwise
+                    androidx.compose.animation.AnimatedVisibility(
                         visible = state.pages.isNotEmpty(),
                         enter = scaleIn() + fadeIn(),
                         exit = scaleOut() + fadeOut(),
