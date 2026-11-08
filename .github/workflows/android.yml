@@ -19,19 +19,27 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v4
 
-      # The Gradle distribution download is sometimes answered with HTTP 504;
-      # fetch it with retries before the real build starts.
-      - name: Download Gradle distribution
-        run: |
-          for i in 1 2 3 4 5; do
-            ./gradlew --no-daemon --version && exit 0
-            echo "Gradle download failed (attempt $i), retrying in $((i * 15))s"
-            sleep $((i * 15))
-          done
-          exit 1
-
+      # The Gradle distribution download (services.gradle.org -> GitHub releases)
+      # sometimes answers with HTTP 504. Retry it; if it stays down, fall back to the
+      # Gradle that ships with the runner image.
       - name: Build debug APK
-        run: ./gradlew --no-daemon assembleDebug
+        run: |
+          for i in 1 2 3; do
+            if ./gradlew --no-daemon --version; then
+              ./gradlew --no-daemon assembleDebug
+              exit $?
+            fi
+            echo "Gradle download failed (attempt $i), retrying in $((i * 20))s"
+            sleep $((i * 20))
+          done
+          if command -v gradle >/dev/null; then
+            echo "Falling back to the runner's preinstalled Gradle"
+            gradle --version
+            gradle --no-daemon assembleDebug
+          else
+            echo "No Gradle available"
+            exit 1
+          fi
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
