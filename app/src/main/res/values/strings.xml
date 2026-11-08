@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI Scanner</string>
+
+    <!-- Navigation -->
+    <string name="nav_documents">Documents</string>
+    <string name="nav_tools">Tools</string>
+    <string name="nav_scan">Scan</string>
+    <string name="nav_insights">Insights</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Scan modes -->
+    <string name="mode_document">Document</string>
+    <string name="mode_photo">Photo</string>
+    <string name="mode_business_card">Business card</string>
+    <string name="mode_id_card">ID card</string>
+    <string name="mode_book">Book</string>
+    <string name="mode_whiteboard">Whiteboard</string>
+    <string name="mode_receipt">Receipt</string>
+    <string name="mode_qr">QR code</string>
+
+    <!-- Camera -->
+    <string name="camera_permission_title">Let\'s start scanning</string>
+    <string name="camera_permission_body">AI Scanner needs your camera to capture documents. Your scans never leave your phone.</string>
+    <string name="camera_permission_button">Allow camera</string>
+    <string name="camera_shutter">Take picture</string>
+    <string name="camera_done">Done</string>
+    <string name="camera_flash">Flash</string>
+    <string name="camera_library">Open documents</string>
+    <string name="camera_pages">%1$d pages</string>
+    <string name="camera_capture_failed">That didn\'t work. Please try again.</string>
+    <string name="camera_hint_document">Hold steady over the document</string>
+    <string name="camera_hint_photo">Capture a regular photo</string>
+    <string name="camera_hint_soon">This mode gets its smart tuning soon. It already scans as a document.</string>
+    <string name="camera_saving">Saving…</string>
+    <string name="camera_discard">Discard pages</string>
+
+    <!-- Documents -->
+    <string name="documents_title">Documents</string>
+    <string name="documents_search">Search documents</string>
+    <string name="documents_empty_title">Nothing here yet</string>
+    <string name="documents_empty_body">Tap the orange button and scan your first document.</string>
+    <string name="documents_import">Import images</string>
+    <string name="documents_no_results">No document matches \"%1$s\"</string>
+    <plurals name="page_count">
+        <item quantity="one">%d page</item>
+        <item quantity="other">%d pages</item>
+    </plurals>
+    <string name="document_default_title">Scan %1$s</string>
+    <string name="document_import_title">Import %1$s</string>
+
+    <!-- Detail -->
+    <string name="detail_tab_pages">Pages</string>
+    <string name="detail_tab_text">Text</string>
+    <string name="detail_tab_data">Data</string>
+    <string name="detail_tab_ai">AI</string>
+    <string name="detail_tab_export">Export</string>
+    <string name="detail_share">Share</string>
+    <string name="detail_rename">Rename</string>
+    <string name="detail_delete">Delete</string>
+    <string name="detail_delete_confirm_title">Delete this document?</string>
+    <string name="detail_delete_confirm_body">All pages are removed from your phone. This can\'t be undone.</string>
+    <string name="detail_text_soon">Text recognition is coming next. You\'ll be able to select and copy every word here.</string>
+    <string name="detail_data_soon">Phone numbers, emails, IBANs and tax numbers will appear here, each with a copy button.</string>
+    <string name="detail_ai_soon">Translate and summarize this document right on your phone, no cloud needed.</string>
+    <string name="detail_export_soon">PDF, searchable PDF, CSV, TXT, JSON, Excel and Word export are on the way.</string>
+    <string name="detail_pages_hint">Swipe to flip through %1$d pages</string>
+
+    <!-- Tools -->
+    <string name="tools_title">Tools</string>
+    <string name="tools_translate">Translate</string>
+    <string name="tools_translate_body">German and English, offline</string>
+    <string name="tools_summarize">Summarize</string>
+    <string name="tools_summarize_body">Short or as bullet points</string>
+    <string name="tools_read_aloud">Read aloud</string>
+    <string name="tools_read_aloud_body">Listen to any scan</string>
+    <string name="tools_merge">Merge and split</string>
+    <string name="tools_merge_body">Combine or separate documents</string>
+    <string name="tools_signature">Signature</string>
+    <string name="tools_signature_body">Draw once, insert anywhere</string>
+    <string name="tools_qr">QR scanner</string>
+    <string name="tools_qr_body">Links and text instantly</string>
+
+    <!-- Insights -->
+    <string name="insights_title">Insights</string>
+    <string name="insights_expenses">Expenses</string>
+    <string name="insights_expenses_body">Monthly totals from your receipts and invoices</string>
+    <string name="insights_tables">Collection tables</string>
+    <string name="insights_tables_body">One row per document, ready as CSV</string>
+    <string name="insights_deadlines">Deadlines</string>
+    <string name="insights_deadlines_body">Payment reminders from your letters</string>
+    <string name="insights_contacts">Business cards</string>
+    <string name="insights_contacts_body">Saved straight to your contacts</string>
+    <string name="badge_soon">Soon</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_scan">Scanning</string>
+    <string name="settings_auto_capture">Auto capture</string>
+    <string name="settings_auto_capture_body">Take the picture automatically once the document is steady</string>
+    <string name="settings_default_mode">Start mode</string>
+    <string name="settings_haptics">Haptic feedback</string>
+    <string name="settings_haptics_body">A short vibration when you capture or save</string>
+    <string name="settings_section_pro">AI Scanner Pro</string>
+    <string name="settings_pro_body">Everything you need is free. Pro extras will follow later.</string>
+    <string name="settings_section_about">About</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="settings_privacy">All scans and AI features run on your phone. Nothing is uploaded.</string>
+
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_back">Back</string>
+</resources>
