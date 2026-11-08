@@ -1,0 +1,49 @@
+name: Android build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      # The Gradle distribution download (services.gradle.org -> GitHub releases)
+      # sometimes answers with HTTP 504. Retry it; if it stays down, fall back to the
+      # Gradle that ships with the runner image.
+      - name: Build debug APK
+        run: |
+          for i in 1 2 3; do
+            if ./gradlew --no-daemon --version; then
+              ./gradlew --no-daemon assembleDebug
+              exit $?
+            fi
+            echo "Gradle download failed (attempt $i), retrying in $((i * 20))s"
+            sleep $((i * 20))
+          done
+          if command -v gradle >/dev/null; then
+            echo "Falling back to the runner's preinstalled Gradle"
+            gradle --version
+            gradle --no-daemon assembleDebug
+          else
+            echo "No Gradle available"
+            exit 1
+          fi
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-scanner-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error

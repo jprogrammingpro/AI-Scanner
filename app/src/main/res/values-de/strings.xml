@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_documents">Dokumente</string>
+    <string name="nav_tools">Werkzeuge</string>
+    <string name="nav_scan">Scannen</string>
+    <string name="nav_insights">Auswertung</string>
+    <string name="nav_settings">Einstellungen</string>
+
+    <string name="mode_document">Dokument</string>
+    <string name="mode_photo">Foto</string>
+    <string name="mode_business_card">Visitenkarte</string>
+    <string name="mode_id_card">Ausweis</string>
+    <string name="mode_book">Buch</string>
+    <string name="mode_whiteboard">Whiteboard</string>
+    <string name="mode_receipt">Quittung</string>
+    <string name="mode_qr">QR-Code</string>
+
+    <string name="camera_permission_title">Los geht\'s mit dem Scannen</string>
+    <string name="camera_permission_body">AI Scanner braucht deine Kamera, um Dokumente aufzunehmen. Deine Scans verlassen dein Handy nie.</string>
+    <string name="camera_permission_button">Kamera erlauben</string>
+    <string name="camera_shutter">Foto aufnehmen</string>
+    <string name="camera_done">Fertig</string>
+    <string name="camera_flash">Blitz</string>
+    <string name="camera_library">Dokumente öffnen</string>
+    <string name="camera_pages">%1$d Seiten</string>
+    <string name="camera_capture_failed">Das hat nicht geklappt. Versuch es bitte noch einmal.</string>
+    <string name="camera_hint_document">Halte das Handy ruhig über das Dokument</string>
+    <string name="camera_hint_photo">Normales Foto aufnehmen</string>
+    <string name="camera_hint_soon">Dieser Modus bekommt bald seine eigene Optimierung. Er scannt schon jetzt als Dokument.</string>
+    <string name="camera_saving">Wird gespeichert…</string>
+    <string name="camera_discard">Seiten verwerfen</string>
+
+    <string name="documents_title">Dokumente</string>
+    <string name="documents_search">Dokumente durchsuchen</string>
+    <string name="documents_empty_title">Noch ist alles leer</string>
+    <string name="documents_empty_body">Tippe auf den orangefarbenen Button und scanne dein erstes Dokument.</string>
+    <string name="documents_import">Bilder importieren</string>
+    <string name="documents_no_results">Kein Dokument passt zu \"%1$s\"</string>
+    <plurals name="page_count">
+        <item quantity="one">%d Seite</item>
+        <item quantity="other">%d Seiten</item>
+    </plurals>
+    <string name="document_default_title">Scan %1$s</string>
+    <string name="document_import_title">Import %1$s</string>
+
+    <string name="detail_tab_pages">Seiten</string>
+    <string name="detail_tab_text">Text</string>
+    <string name="detail_tab_data">Daten</string>
+    <string name="detail_tab_ai">KI</string>
+    <string name="detail_tab_export">Export</string>
+    <string name="detail_share">Teilen</string>
+    <string name="detail_rename">Umbenennen</string>
+    <string name="detail_delete">Löschen</string>
+    <string name="detail_delete_confirm_title">Dokument löschen?</string>
+    <string name="detail_delete_confirm_body">Alle Seiten werden von deinem Handy entfernt. Das lässt sich nicht rückgängig machen.</string>
+    <string name="detail_text_soon">Die Texterkennung kommt als Nächstes. Dann kannst du hier jedes Wort markieren und kopieren.</string>
+    <string name="detail_data_soon">Hier erscheinen Telefonnummern, E-Mails, IBANs und Steuernummern, jeweils mit Kopieren-Symbol.</string>
+    <string name="detail_ai_soon">Übersetze und fasse dieses Dokument direkt auf dem Handy zusammen, ganz ohne Cloud.</string>
+    <string name="detail_export_soon">Export als PDF, durchsuchbares PDF, CSV, TXT, JSON, Excel und Word ist unterwegs.</string>
+    <string name="detail_pages_hint">Wische durch %1$d Seiten</string>
+
+    <string name="tools_title">Werkzeuge</string>
+    <string name="tools_translate">Übersetzen</string>
+    <string name="tools_translate_body">Deutsch und Englisch, offline</string>
+    <string name="tools_summarize">Zusammenfassen</string>
+    <string name="tools_summarize_body">Kurz oder als Stichpunkte</string>
+    <string name="tools_read_aloud">Vorlesen</string>
+    <string name="tools_read_aloud_body">Jeden Scan anhören</string>
+    <string name="tools_merge">Zusammenführen und Teilen</string>
+    <string name="tools_merge_body">Dokumente kombinieren oder trennen</string>
+    <string name="tools_signature">Unterschrift</string>
+    <string name="tools_signature_body">Einmal zeichnen, überall einfügen</string>
+    <string name="tools_qr">QR-Scanner</string>
+    <string name="tools_qr_body">Links und Text sofort</string>
+
+    <string name="insights_title">Auswertung</string>
+    <string name="insights_expenses">Ausgaben</string>
+    <string name="insights_expenses_body">Monatssummen aus Quittungen und Rechnungen</string>
+    <string name="insights_tables">Sammeltabellen</string>
+    <string name="insights_tables_body">Eine Zeile pro Dokument, fertig als CSV</string>
+    <string name="insights_deadlines">Fristen</string>
+    <string name="insights_deadlines_body">Zahlungserinnerungen aus deinen Briefen</string>
+    <string name="insights_contacts">Visitenkarten</string>
+    <string name="insights_contacts_body">Direkt in deine Kontakte</string>
+    <string name="badge_soon">Bald</string>
+
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_section_scan">Scannen</string>
+    <string name="settings_auto_capture">Auto-Auslöser</string>
+    <string name="settings_auto_capture_body">Automatisch auslösen, sobald das Dokument ruhig im Bild ist</string>
+    <string name="settings_default_mode">Startmodus</string>
+    <string name="settings_haptics">Haptisches Feedback</string>
+    <string name="settings_haptics_body">Kurze Vibration beim Aufnehmen und Speichern</string>
+    <string name="settings_section_pro">AI Scanner Pro</string>
+    <string name="settings_pro_body">Alles Wichtige ist kostenlos. Pro-Extras folgen später.</string>
+    <string name="settings_section_about">Über die App</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="settings_privacy">Alle Scans und KI-Funktionen laufen auf deinem Handy. Nichts wird hochgeladen.</string>
+
+    <string name="action_cancel">Abbrechen</string>
+    <string name="action_save">Speichern</string>
+    <string name="action_back">Zurück</string>
+</resources>
