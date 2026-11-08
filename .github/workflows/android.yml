@@ -19,6 +19,17 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v4
 
+      # The Gradle distribution download is sometimes answered with HTTP 504;
+      # fetch it with retries before the real build starts.
+      - name: Download Gradle distribution
+        run: |
+          for i in 1 2 3 4 5; do
+            ./gradlew --no-daemon --version && exit 0
+            echo "Gradle download failed (attempt $i), retrying in $((i * 15))s"
+            sleep $((i * 15))
+          done
+          exit 1
+
       - name: Build debug APK
         run: ./gradlew --no-daemon assembleDebug
 
